@@ -1,53 +1,121 @@
+/* Base Styles */
 body {
     font-family: 'Open Sans', sans-serif;
     color: #333;
-    background-color: #f8f0f6;
+    background-color: #f8f0f6; /* Soft pinkish-beige background */
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
+/* Header Styling */
 header {
     text-align: center;
-    padding: 2em;
-    background-color: #f9d1e5;
+    padding: 2.5em; /* Increased padding for more space */
+    background-color: #f9d1e5; /* Soft pink background */
     color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for header */
 }
 
-h1, h2 {
+header h1 {
     font-family: 'Playfair Display', serif;
-    color: #ff99c8;
+    color: #ff99c8; /* Pink heading */
+    font-size: 3rem; /* Larger, more prominent */
+    letter-spacing: 1.5px; /* Slight spacing for elegance */
+    margin: 0.2em 0;
 }
 
+header h2 {
+    font-family: 'Playfair Display', serif;
+    color: #ff6699; /* Slightly darker pink for subheadings */
+    font-size: 1.8rem;
+    margin-top: 0.5em;
+}
+
+/* Main Content */
 main {
-    padding: 1em;
+    max-width: 1200px; /* Limit the width for readability */
+    margin: 2em auto;
+    padding: 1.5em;
+    background-color: #fff; /* Clean white background for contrast */
+    border-radius: 8px; /* Soft rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for content area */
 }
 
+/* Link Styling */
 a {
     text-decoration: none;
     color: #ff99c8;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
 }
 
 a:hover {
+    color: #ff6699; /* Darker pink on hover */
     text-decoration: underline;
 }
 
+/* Navigation */
 nav {
     text-align: center;
     margin-top: 2em;
 }
 
 nav a {
-    margin: 0 10px;
+    margin: 0 15px;
+    padding: 0.5em 1em;
+    border: 1px solid #ff99c8; /* Subtle border for links */
+    border-radius: 5px;
+    background-color: #fff; /* White background for button-like feel */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
 }
 
+nav a:hover {
+    background-color: #ff99c8; /* Pink background on hover */
+    color: #fff; /* White text */
+}
+
+/* Button Styling */
 button {
     background-color: #ff99c8;
     color: white;
-    padding: 0.5em 1em;
+    padding: 0.75em 1.5em; /* Increased padding for a better feel */
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover and click effect */
 }
 
 button:hover {
     background-color: #ff6699;
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+button:active {
+    transform: translateY(0); /* Reset on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 1em;
+    }
+
+    nav a {
+        margin: 0 10px;
+        padding: 0.5em;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
 }
